@@ -9,7 +9,7 @@ Needed tools installed in your machine to run the examples:
 - Python with `pip` package manager installed
 - Conan: `pip install Conan` or download from https://conan.io/downloads
 - CMake: https://cmake.org/download
-- Compiler of choice: gcc, clang, apple-clang, visual studio (we are using Visual Studio 2017 in this example)
+- Compiler of choice: gcc, clang, apple-clang, visual studio
 
 ### Building the examples
 
