@@ -9,7 +9,7 @@ Needed tools installed in your machine to run the examples:
 - Python with `pip` package manager installed
 - Conan: `pip install Conan` or download from https://conan.io/downloads
 - CMake: https://cmake.org/download
-- Compiler of choice: gcc, clang, apple-clang, visual studio (we are using Visual Studio 2017 in this example)
+- Compiler of choice: gcc, clang, apple-clang, visual studio
 
 ### Building the examples
 
@@ -23,21 +23,35 @@ Install `tinkerforge-bindings/2.1.32` package from [ConanCenter](https://conan.i
 This package includes de C/C++ API bindings from [Tinkerforge](https://www.tinkerforge.com/):
 
 ```
-conan install ../conanfile.txt
+conan install ../conanfile.txt --build=missing
 ```
 
 Configure the project and build the examples using CMake build system:
 
+**Windows / Visual Studio**
+
 ```
 cmake .. -G "Visual Studio 15" -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake
 cmake --build . --config Release
-```
 
-Run the examples:
+# Run the examples:
 
-```
 Release/example_configuration.exe
 ...
 Release/example_callback.exe
+...
+```
+
+**Linux/macOS**
+
+```
+cmake .. -G "Unix Makefiles" -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake
+cmake --build .
+
+# Run the examples:
+
+./example_configuration
+...
+./example_callback
 ...
 ```
