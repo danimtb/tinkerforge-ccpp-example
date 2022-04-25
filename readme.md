@@ -31,7 +31,7 @@ Configure the project and build the examples using CMake build system:
 **Windows / Visual Studio**
 
 ```
-cmake .. -G "Visual Studio 15" -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake
+cmake .. -G "Visual Studio 15" -DCMAKE_TOOLCHAIN_FILE="conan_toolchain.cmake"
 cmake --build . --config Release
 
 # Run the examples:
